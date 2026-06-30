@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+:root {
+    --color-ink: #102033;
+    --color-muted: #5d6b7c;
+    --color-line: rgba(16, 32, 51, 0.08);
+    --color-panel: rgba(255, 255, 255, 0.9);
+    --color-surface: #f4f7f3;
+    --color-brand: #11675f;
+    --color-brand-dark: #0f4f49;
+    --color-accent: #b76a18;
+    --shadow-card: 0 22px 55px -34px rgba(15, 23, 42, 0.42);
+}
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(115deg, rgba(183, 106, 24, 0.12), transparent 30%),
+        linear-gradient(245deg, rgba(17, 103, 95, 0.13), transparent 34%),
+        linear-gradient(180deg, #fbfcf8 0%, #eef5f1 58%, #edf3ee 100%);
+    color: var(--color-ink);
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.app-shell {
+    min-height: 100vh;
+}
+
+.glass-panel {
+    background: var(--color-panel);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow-card);
+}
+
+.soft-card {
+    border: 1px solid var(--color-line);
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: var(--shadow-card);
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.soft-card:hover {
+    border-color: rgba(17, 103, 95, 0.14);
+    box-shadow: 0 26px 60px -38px rgba(15, 23, 42, 0.48);
+}
+
+.recommendation-card {
+    border: 1px solid rgba(17, 103, 95, 0.18);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(237, 247, 242, 0.9)),
+        linear-gradient(90deg, rgba(183, 106, 24, 0.08), transparent);
+    box-shadow: var(--shadow-card);
+}
+
+.page-title {
+    letter-spacing: -0.02em;
+}
